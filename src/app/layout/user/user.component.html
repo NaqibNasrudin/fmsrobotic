@@ -1,0 +1,24 @@
+<!-- <section class="bg-gray-50 dark:bg-gray-900"> -->
+  <div class="grid grid-cols-8 text-[23px] mx-[50px] my-[50px]  ">
+    <div class="col-span-1 flex justify-between flex-col">
+      <div class="menu">
+        <div class="title font-bold">Menu</div>
+
+        <div class="menu-item my-[40px]" *ngFor="let menu of menuItem">
+          <a routerLink="{{menu.route}}">{{ menu.name }}</a>
+        </div>
+      </div>
+
+      <div class="logout fixed bottom-0 my-[50px]">
+          <button (click)="logout()">Logout</button>
+      </div>
+
+    </div>
+
+    <div class="col-span-7">
+      <router-outlet></router-outlet>
+    </div>
+
+
+  </div>
+<!-- </section> -->
