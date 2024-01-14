@@ -26,4 +26,12 @@ export class ProductService {
             })
         )
     }
+
+    searchProduct(body: any): Observable<any> {
+      return this.http.get(`${this.api}/search`, {params: body}).pipe(
+        map((response) => {
+          return response;
+        })
+      )
+    }
 }
